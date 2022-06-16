@@ -1,0 +1,134 @@
+.app {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.todo {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+
+    width: 400px;
+
+    border-radius: 5px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid rgb(230, 230, 230);
+    padding-bottom: 2rem;
+}
+
+.header button {
+    background-color: #FB6C6F;
+    padding: 0.6rem;
+    border-radius: 5px;
+}
+
+.header button:hover {
+    filter: brightness(0.90);
+    transition: 0.4s;
+}
+
+.header button svg {
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.header .input-fake {
+    padding: 1rem 2rem;
+    background-color: rgb(244, 243, 243);
+    width: 300px;
+    border-radius: 5px;
+}
+
+.header .input-fake input {
+    background-color: rgb(244, 243, 243);
+    font-family: Raleway;
+    font-size: 1.2rem;
+}
+
+.task-container {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.check-and-title {
+    display: flex;
+    align-items: center;
+}
+
+.tasks + div {
+    margin-top: 1rem;
+}
+
+.checkbox-container {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 24px;
+    cursor: pointer;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #FB6C6F;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 8px;
+    top: 3.5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.task-container.completed p{
+    color: #909193;
+}
+
+.task-container p {
+    margin-left: 0.6rem;
+    font-size: 1.4rem;
+}
+
+.task-container svg {
+    font-size: 1.6rem;
+    color: #FD355A;
+    cursor: pointer;
+}
